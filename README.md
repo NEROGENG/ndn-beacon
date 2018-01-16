@@ -53,12 +53,12 @@ Bluetooth Library: RFduinoBLE
 NDN Library: NDN-CPP-LITE
 
 #### Setup
-1. Follow this RFduino  guide  to get the RFduino driver/library and Arduino IDE installed. Try out a few examples provided in the IDE to make sure you have the correct setup.
-2. Follow this NDN-CPP  guide  to install the NDN-CPP library.
-3. Partially follow this  guide  to include the NDN-CPP-LITE library in your Arduino sketch.
+1. Follow this [RFduino guide](http://www.rfduino.com/wp-content/uploads/2015/08/RFduino-Quick-Start-Guide-08.21.15-11.40AM.pdf) to get the RFduino driver/library and Arduino IDE installed. Try out a few examples provided in the IDE to make sure you have the correct setup.
+2. Follow this [NDN-CPP guide](https://github.com/named-data/ndn-cpp/blob/master/INSTALL.md) to install the NDN-CPP library.
+3. Partially follow [this guide](https://github.com/named-data/ndn-cpp/blob/master/examples/arduino/analog-reading/INSTALL.md) to include the NDN-CPP-LITE library in your Arduino sketch.
 By partially, I mean the following:
 a. Instead of "Change to the directory /hardware/tools/avr/avr/include and enter: ln
--s \<NDN-CPP root\>/include/ndn-cpp", follow this  guide  to include NDN-CPP-LITE, i.e. create a soft-link to "\<NDN-CPP root\>/include" inside "\<depends on your OS\>/Arduino/libraries/".
+-s \<NDN-CPP root\>/include/ndn-cpp", follow [this guide](https://www.arduino.cc/en/hacking/libraries) to include NDN-CPP-LITE, i.e. create a soft-link to "\<NDN-CPP root\>/include" inside "\<depends on your OS\>/Arduino/libraries/".
 4. Now everything should be in good shape.
 #### Code Overview
 The producer app code should be commented an readable. Written below is an overview of the app. Reader should be familiar with the concept of NDN interest/data and BLE peripheral/service/characteristic and C/C++. As a peripheral device, there are three important aspects.
@@ -75,12 +75,16 @@ Among the three important aspects, “read” and “write” are talking to two
 This refers to the sample Node.js command line app running on macOS.
 #### Environment
 Laptop: MacBook Pro (Retina, 13-inch, Late 2013) OS: macOS 10.13.2
+
 Language: Javascript
+
 Bluetooth Library: noble (Node.js)
+
 NDN Library: NDN-JS
+
 #### Setup
-1. Follow this noble  guide  to get Node.js and noble installed. Try out a few examples provided in the repo to make sure you have the correct setup.
-2. Master branch noble is not working for macOS as of 1/8/2018. Follow this  issue , and run "npm install git://github.com/jacobrosenthal/noble.git#highsierra" instead during installation.
+1. Follow this [noble guide](https://github.com/sandeepmistry/noble/blob/master/README.md) to get Node.js and noble installed. Try out a few examples provided in the repo to make sure you have the correct setup.
+2. Master branch noble is not working for macOS as of 1/8/2018. Follow this [issue](https://github.com/sandeepmistry/noble/issues/679), and run "npm install git://github.com/jacobrosenthal/noble.git#highsierra" instead during installation.
 #### Code Overview
 The producer app code should be commented an readable. Written below is an overview of the app. Reader should be familiar with the concept of NDN interest/data and BLE central/service/characteristic and Node.js. As a central device, there are three important aspects.
 
